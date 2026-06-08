@@ -1,0 +1,216 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Calibri, sans-serif;
+}
+
+body {
+    background-color: #cde0f2;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*top bar*/
+header {
+    width: 100%;
+    background-color: #366c79;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    display: flex;
+    gap: 10vh;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: Arial, sans-serif;
+}
+
+nav a.active {
+    text-decoration: underline;
+}
+
+/*general container*/
+.container {
+    width: 100%;
+    max-width: 1100px;
+    padding: 40px 20px;
+}
+
+/*buttons*/
+.button {
+    display: inline-block;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    font-family: Calibri, sans-serif;
+}
+
+.button-booknow {
+    background-color: #649fa8;
+    color: #ffffff;
+    padding: 12px 35px;
+    font-weight: bold;
+}
+
+.button-booknow:hover {
+    background-color: #53858e;
+}
+
+.button-services {
+    background-color: #e9eff5;
+    color: #366c79;
+    padding: 12px 40px;
+    font-weight: bold;
+}
+
+.button-services:hover {
+    background-color: #d1dfec;
+}
+
+/*main Section*/
+.main-section {
+    background-color: #ffffff;
+    display: flex;
+    gap: 30px;
+    padding: 45px;
+    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.main-image-wrapper {
+    flex: 1;
+    min-height: 280px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.main-content {
+    flex: 1.5;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.text-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: #333333;
+    font-size: 16px;
+    font-family: Calibri, sans-serif;
+}
+
+.main-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top: 10px;
+    margin-right: 40px;
+}
+
+.cta-title {
+    color: #000000;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Calibri, sans-serif;
+}
+
+/*about section*/
+.about-section {
+    display: flex;
+    gap: 50px;
+    margin-top: 60px;
+    align-items: center;
+}
+
+/* Overlapping Dark Gray Image Layout */
+.about-images-container {
+    flex: 1;
+    position: relative;
+    height: 320px;
+}
+
+.img-wrapper {
+    position: absolute;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    overflow: hidden;
+}
+
+.about-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.box-1 {
+    width: 240px;
+    height: 200px;
+    top: 0;
+    left: 20px;
+    z-index: 1;
+}
+
+.box-2 {
+    width: 260px;
+    height: 180px;
+    bottom: 0;
+    right: 20px;
+    z-index: 2;
+}
+
+/*about text layout*/
+.about-content {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.about-content h2 {
+    font-size: 26px;
+    color: #000000;
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-family: Calibri, sans-serif;
+}
+
+.descriptiontext {
+    color: #333333;
+    font-size: 16px;
+    margin-bottom: 15px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: Calibri, sans-serif;
+}
+
+.about-content .button-services {
+    margin-top: 20px;
+}

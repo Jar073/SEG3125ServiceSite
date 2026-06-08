@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experidental - Services</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Calibri;
+        }
+
+        body {
+            background-color: #cde0f2;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /*top bar*/
+        header {
+            width: 100%;
+            background-color: #366c79;
+            padding: 20px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav {
+            display: flex;
+            gap: 10vh;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 500;
+            font-family: Arial;
+        }
+
+        nav a.active {
+            text-decoration: underline;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            padding: 40px 20px 60px 20px;
+        }
+
+        /*services white background*/
+        .main-services-panel {
+            background-color: #ffffff;
+            padding: 50px;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 60px; /*spacing between the two columns*/
+        }
+
+        /*make the grids*/
+        .services-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: flex-start;
+        }
+
+        .image-column {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .procedure-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /*texts, made left aligned for both*/
+        .text-column {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+            padding-top: 10px;
+        }
+
+        .text-column h2 {
+            font-size: 24px;
+            color: #366c79; /*blue looks so much better than black*/
+            margin-bottom: 25px;
+            font-weight: bold;
+            font-family: Calibri;
+        }
+
+        .text-lines {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+        }
+
+        .descriptiontext {
+            color: #333333;
+            font-size: 16px;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: clip;
+            font-family: Calibri;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="/index.html">Home</a>
+            <a href="/services.html" class="active">Services</a>
+            <a href="/about.html">About</a>
+            <a href="/booknow.html">Book Now</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="main-services-panel">
+
+            <div class="services-row">
+                <div class="image-column">
+                    <img src="/images/cleaning.png" alt="Tooth Cleaning Image" class="procedure-img">
+                </div>
+                <div class="text-column">
+                    <h2>Dental Cleaning and Checkups</h2>
+                    <div class="text-lines">
+                        <p class="descriptiontext">Our trained dental associates are ready to assist you with your </p>
+                        <p class="descriptiontext">every dental need. We offer basic cleanings and scheduled checkups</p>
+                        <p class="descriptiontext">to stay ontop of your dental hygene!</p>
+                        <p class="descriptiontext">Book an appointment now to speak with one of our specialists if you</p>
+                        <p class="descriptiontext">have any concerns or pains.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="services-row">
+                <div class="text-column">
+                    <h2>Tooth Extraction and Fillings</h2>
+                    <div class="text-lines">
+                        <p class="descriptiontext">After making an appointment with one of our hygenists, you may </p>
+                        <p class="descriptiontext">have been instructed to get a tooth removed or have a cavity filled!</p>
+                        <p class="descriptiontext"></p>
+                        <p class="descriptiontext">We offer a variety of these services in house.</p>
+                        <p class="descriptiontext">Everything from a simple tooth filling, removal or even root canal.</p>
+                        <p class="descriptiontext">Please book an appointment online; if you are in serious pain please</p>
+                        <p class="descriptiontext">select Urgant Appointment to recieve the nearest time slot available.</p>
+                    </div>
+                </div>
+                <div class="image-column">
+                    <img src="/images/toothremoval.png" alt="Tooth Removal Image" class="procedure-img">
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>

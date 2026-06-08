@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experidental</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Calibri;
+        }
+
+        /*top bar*/
+        header {
+            width: 100%;
+            background-color: #366c79;
+            padding: 20px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav {
+            display: flex;
+            gap: 10vh;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 500;
+            font-family: Arial;
+        }
+
+        nav a.active {
+            text-decoration: underline;
+        }
+
+        /*background*/
+        body {
+            background-color: #cde0f2;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /*all container*/
+        .container {
+            width: 100%;
+            max-width: 650px;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        /*request an appointment text*/
+        h2 {
+            color: #000000;
+            margin-bottom: 30px;
+            font-size: 24px;
+            font-weight: bold;
+            font-family: Calibri;
+        }
+
+        /*appointment form*/
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 18px;
+            text-align: left;
+        }
+
+        .form-label {
+            width: 180px;
+            font-size: 18px;
+            color: #000000;
+            padding-right: 15px;
+            text-align: right;
+            font-weight: 500;
+            font-family: Calibri;
+        }
+
+        .form-input-container {
+            flex: 1;
+            display: flex;
+            gap: 15px;
+        }
+
+        /*make the inputs rounded and stylized*/
+        input, select {
+            width: 100%;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 20px;
+            background-color: #e9eff5;
+            color: #b0c2d4;
+            font-size: 15px;
+            outline: none;
+            font-family: Calibri;
+        }
+
+        /*make the inputs a different color*/
+        input::placeholder {
+            color: #b0c2d4;
+        }
+
+        /*make the drop downs a different color*/
+        select:focus, select:valid {
+            color: #333333;
+        }
+
+        /*submit button*/
+        .confirmbutton {
+            background-color: #649fa8;
+            color: #ffffff;
+            border: none;
+            border-radius: 20px;
+            padding: 12px 24px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.2s;
+            text-decoration: none;
+        }
+
+        .confirmbutton:hover {
+            background-color: #53858e;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="/index.html">Home</a>
+            <a href="/services.html">Services</a>
+            <a href="/about.html">About</a>
+            <a href="/booknow.html" class="active">Book Now</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Request an Appointment</h2>
+        
+        <form>
+            <div class="form-group">
+                <label class="form-label">Appointment Type</label>
+                <div class="form-input-container">
+                    <select required>
+                        <option value="" disabled selected hidden>Select a Service</option>
+                        <option value="consultation">Cleaning</option>
+                        <option value="general">General Checkup</option>
+                        <option value="follow-up">Follow-up Visit</option>
+                        <option value="filling">Tooth Filling</option>
+                        <option value="extraction">Tooth Extraction</option>
+                        <option value="rootcanal">Root Canal</option>
+                        <option value="emergency">Urgent Appointment</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Appointment Day</label>
+                <div class="form-input-container">
+                    <select required>
+                        <option value="" disabled selected hidden>Select a Day</option>
+                        <option value="monday">Monday</option>
+                        <option value="tuesday">Tuesday</option>
+                        <option value="wednesday">Wednesday</option>
+                        <option value="thursday">Thursday</option>
+                        <option value="friday">Friday</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Appointment Time</label>
+                <div class="form-input-container">
+                    <select required>
+                        <option value="" disabled selected hidden>Select a Time</option>
+                        <option value="morning">Morning (9:00 AM - 12:00 PM)</option>
+                        <option value="afternoon">Afternoon (12:00 PM - 6:00 PM)</option>
+                        <option value="evening">Evening (6:00 PM - 10:00 PM)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Name</label>
+                <div class="form-input-container">
+                    <input type="text" placeholder="First Name" required>
+                    <input type="text" placeholder="Last Name" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Email</label>
+                <div class="form-input-container">
+                    <input type="email" placeholder="Example@gmail.com" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Phone Number</label>
+                <div class="form-input-container">
+                    <input type="tel" placeholder="+1 (XXX) XXX-XXXX">
+                </div>
+            </div>
+
+            <a href="/appointmentconfirmed.html" class="confirmbutton">Confirm Appointment</a>
+        </form>
+    </div>
+
+</body>
+</html>
